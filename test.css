@@ -1,0 +1,76 @@
+body,
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #122;
+  overflow: hidden;
+  color: #ddd;
+}
+
+#mobile-container {
+  height: 90vh;
+  width: 300vw;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: left 0.5s cubic-bezier(0.5, 1, 0.5, 1) 0s;
+  overflow: hidden;
+}
+
+.mobile-page {
+  width: 100vw;
+  overflow-y: scroll;
+  padding: 15px;
+  scroll-behavior: smooth;
+}
+
+.disable-scrollbars::-webkit-scrollbar {
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0px;
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.mobile-menu {
+  height: 8vh;
+  width: 100vw;
+  padding: 10px;
+  position: absolute;
+  bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #ddd;
+}
+
+.mobile-menu button:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.mobile-menu button.active {
+  color: #aff;
+  transform: scale(1.1);
+}
+
+.mobile-menu button {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
